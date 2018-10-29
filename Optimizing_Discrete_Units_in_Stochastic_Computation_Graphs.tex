@@ -82,7 +82,7 @@ In many cases we can sample from $p_\phi(x)$ by first sampling $z$ from some fix
 
 Having reparameterized $p_\theta(x)$, we can now express the objective as an expectation w.r.t. $q(z)$
 \begin{equation}
-   L(\theta, \phi) = \mathbb{E}_{x \sim p_\phi(x)}[f_\theta(x)] = \mathbb{E}_{z \sim q_\phi(z)}[f_\theta(g(z))]
+   L(\theta, \phi) = \mathbb{E}_{x \sim p_\phi(x)}[f_\theta(x)] = \mathbb{E}_{z \sim q(z)}[f_\theta(g(z))]
 \end{equation}
 As $q(z)$ does not depend on $\phi$, we can estimate the gradient w.r.t. $\phi$ in exactly the same way we estimated the gradient w.r.t. $\theta$.
 
